@@ -1,0 +1,17 @@
+{
+  "mode": "smoke",
+  "samples": [],
+  "settings": {
+    "provider": "local",
+    "weights": {
+      "defaultImportance": 1,
+      "reuseInfluence": 0.25,
+      "correctionBoost": 1.5,
+      "maxWeight": 6
+    },
+    "importance": {},
+    "learningRate": 0.0005,
+    "steps": 30
+  },
+  "baseModel": ""
+}

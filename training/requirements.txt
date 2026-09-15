@@ -1,0 +1,9 @@
+# Intel macOS / Python 3.11 reproducible CPU baseline.
+# Worker prefers vendor/transformers at 052e652d6d53c2b26ffde87e039b723949a53493 (v4.46.3).
+# Direct dependency pins only, not a complete transitive lock. Installation is owned by A.
+numpy==1.26.4
+torch==2.2.2
+transformers==4.46.3
+peft==0.13.2
+tokenizers==0.20.3
+safetensors==0.6.2

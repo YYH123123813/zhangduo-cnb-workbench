@@ -1,0 +1,65 @@
+:root { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #202629; background: #fafbfa; font-synthesis: none; letter-spacing: 0; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
+:focus-visible { outline: 3px solid #137269; outline-offset: 3px; }
+.shell { display: grid; grid-template-columns: 228px minmax(0, 1fr); min-height: 100dvh; }
+.sidebar { padding: 28px 16px 20px; border-right: 1px solid #dde3df; background: #f1f4f1; display: flex; flex-direction: column; gap: 12px; }
+.brand { display: flex; align-items: center; gap: 10px; padding: 0 12px; font-size: 24px; font-weight: 650; color: #155b50; }
+.workspace-label { font-size: 12px; color: #65726c; padding: 0 12px; margin: 0 0 24px; }
+.sidebar nav { display: grid; gap: 6px; }
+.sidebar nav a { min-height: 46px; display: flex; align-items: center; gap: 12px; border-radius: 5px; padding: 10px 12px; font-size: 14px; overflow-wrap: anywhere; }
+.sidebar nav a[aria-current="page"] { background: #dae8e1; color: #174e41; font-weight: 600; }
+.sidebar nav a:hover { background: #e5ece7; }
+.sidebar svg, .module-list svg { flex-shrink: 0; }
+.sidebar-foot { margin-top: auto; padding: 24px 12px 0; color: #68716c; font-size: 12px; }
+.sidebar-foot a { display: flex; align-items: center; gap: 8px; min-height: 44px; }
+.content { min-width: 0; }
+.topbar { height: 64px; padding: 0 36px; border-bottom: 1px solid #e3e7e3; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: 13px; color: #56605a; background: #fff; }
+.connection { color: #87551d; }
+.topbar > span { min-width: 0; overflow-wrap: anywhere; }
+.shell-link { display: inline-block; padding: 12px 0; text-decoration: underline; color: #155b50; }
+main { max-width: 1100px; margin: 0 auto; padding: 36px; outline: none; }
+.module-heading { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 70px; margin-bottom: 26px; }
+h1 { font-size: 26px; font-weight: 620; line-height: 1.35; margin: 0; overflow-wrap: anywhere; }
+h2 { font-size: 16px; margin: 34px 0 14px; font-weight: 600; }
+.eyebrow { font-size: 11px; color: #64756c; margin: 0 0 8px; }
+.status-tag { color: #355d84; background: #eaf0f7; padding: 6px 9px; font-size: 12px; white-space: nowrap; border-radius: 4px; }
+.properties { margin: 0; border-top: 1px solid #e0e5df; }
+.properties > div { display: grid; grid-template-columns: minmax(120px, 180px) minmax(0, 1fr); padding: 17px 0; border-bottom: 1px solid #e0e5df; gap: 20px; font-size: 14px; line-height: 1.5; }
+dt { color: #627068; } dd { margin: 0; overflow-wrap: anywhere; }
+.module-list a { display: flex; min-height: 60px; align-items: center; gap: 14px; border-bottom: 1px solid #e0e5df; font-size: 14px; }
+.module-list a:hover { background: #f1f5f2; }
+.muted { margin-left: auto; color: #75746c; font-size: 12px; white-space: nowrap; }
+.state-line { display: flex; align-items: center; gap: 10px; min-height: 48px; margin-bottom: 20px; color: #805c27; }
+.icon-button { display: inline-grid; place-items: center; width: 40px; height: 40px; border: 1px solid #d7ddd7; background: #fff; border-radius: 4px; cursor: pointer; }
+.icon-button:disabled { cursor: wait; opacity: .55; }
+.workspace-connection { max-width: 680px; overflow-wrap: anywhere; }
+.connection-form { display: grid; gap: 18px; max-width: 520px; margin: 24px 0; }
+.connection-form > label { display: grid; gap: 8px; font-size: 14px; }
+.connection-form input[type="password"] { width: 100%; min-width: 0; padding: 10px; min-height: 44px; border: 1px solid #b8c4bc; border-radius: 4px; font: inherit; background: #fff; }
+.connection-form .connection-consent { display: flex; gap: 10px; align-items: flex-start; line-height: 1.6; }
+.connection-consent input { flex: 0 0 18px; width: 18px; height: 18px; margin-top: 2px; }
+.connection-form button, .connection-command { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; border: 1px solid #c5d0c8; background: #fff; border-radius: 4px; padding: 10px 14px; font: inherit; cursor: pointer; }
+.connection-command { margin: 12px 12px 18px 0; max-width: 100%; }
+.connection-form button:disabled, .connection-command:disabled { opacity: .55; cursor: default; }
+.connection-form svg, .connection-command svg { flex: 0 0 18px; }
+.skip-link { position: fixed; left: 12px; top: -80px; padding: 12px; background: #fff; border: 2px solid #155b50; z-index: 10; }
+.skip-link:focus { top: 12px; }
+.recovery-strip { margin: 0 0 24px; border-bottom: 1px solid #dce3df; padding: 0 0 12px; font-size: 13px; overflow-wrap: anywhere; }
+.recovery-strip summary { min-height: 36px; cursor: pointer; }
+.recovery-strip summary svg { vertical-align: middle; margin-right: 8px; }
+.recovery-strip ul { list-style: none; margin: 0; padding: 0; }
+.recovery-strip li { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; border-top: 1px solid #e3e7e3; padding: 10px 0; }
+.recovery-strip li > div { display: grid; gap: 6px; min-width: 0; }
+.recovery-strip code { overflow-wrap: anywhere; }
+.recovery-strip .connection-command { flex-shrink: 0; margin: 0; }
+.index-panel { margin-top: 30px; border-top: 1px solid #dce3df; overflow-wrap: anywhere; }
+.index-consent { display: flex; align-items: flex-start; gap: 10px; padding: 16px 0; font-size: 14px; line-height: 1.6; }
+.index-consent input { flex: 0 0 18px; width: 18px; height: 18px; }
+.index-operations { list-style: none; padding: 0; }
+.index-operations li { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 10px 0; border-top: 1px solid #dce3df; }
+.index-operations code { overflow-wrap: anywhere; min-width: 0; }
+@media (max-width: 680px) { .shell { grid-template-columns: 1fr; } .sidebar { padding: 18px 16px 12px; border-right: 0; border-bottom: 1px solid #dde3df; gap: 8px; } .brand { font-size: 22px; padding: 0; } .workspace-label { padding: 0; margin: 0 0 8px; } .sidebar nav { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; } .sidebar nav a { font-size: 12px; gap: 6px; padding: 9px 6px; min-height: 44px; } .sidebar-foot { margin: 0; padding: 0; } .topbar { padding: 10px 20px; height: auto; min-height: 52px; } main { padding: 24px 20px; } h1 { font-size: 23px; } .properties > div { grid-template-columns: 104px minmax(0, 1fr); gap: 10px; } }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }

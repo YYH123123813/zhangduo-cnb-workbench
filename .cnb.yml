@@ -1,0 +1,47 @@
+# CI only. Deployment, publication and CNB side effects require separate
+# explicit authorization and are intentionally not configured here.
+.node-env: &node-env
+  docker:
+    image: node:24
+
+main:
+  push:
+    - name: verify
+      <<: *node-env
+      ifModify:
+        - src/**
+        - tests/**
+        - tools/**
+        - package.json
+        - pnpm-lock.yaml
+        - tsconfig.json
+        - vite.config.ts
+        - vitest.config.ts
+        - .cnb.yml
+      stages:
+        - name: install
+          script: corepack enable && pnpm install --frozen-lockfile
+        - name: typecheck
+          script: pnpm typecheck
+        - name: boundaries
+          script: pnpm check:boundaries
+        - name: test
+          script: pnpm test
+        - name: build
+          script: pnpm build
+
+"**":
+  pull_request:
+    - name: verify-pr
+      <<: *node-env
+      stages:
+        - name: install
+          script: corepack enable && pnpm install --frozen-lockfile
+        - name: typecheck
+          script: pnpm typecheck
+        - name: boundaries
+          script: pnpm check:boundaries
+        - name: test
+          script: pnpm test
+        - name: build
+          script: pnpm build

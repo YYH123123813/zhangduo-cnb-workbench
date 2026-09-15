@@ -1,0 +1,27 @@
+{
+  "mode": "lora",
+  "baseModel": "/absolute/path/to/prepared-pretrained-model",
+  "settings": {
+    "provider": "local",
+    "weights": {"defaultImportance": 1, "reuseInfluence": 0.25, "correctionBoost": 1.5, "maxWeight": 6},
+    "importance": {"synthetic-backup-node": 2},
+    "learningRate": 0.0005,
+    "steps": 30
+  },
+  "samples": [
+    {
+      "id": "synthetic-cache-node",
+      "groupId": "synthetic-conversation-cache",
+      "input": "{\"untrustedTask\":{\"question\":\"When can a cache be reused?\"},\"untrustedSegments\":[{\"id\":\"synthetic-segment-a\",\"role\":\"assistant\",\"text\":\"Verify the cache before reuse.\"}]}",
+      "target": "{\"candidates\":[{\"title\":\"Check cache\",\"question\":\"When can a cache be reused?\",\"claim\":\"Verify the cache before reuse.\",\"kind\":\"principle\",\"whyKeep\":\"Synthetic example only\",\"uncertainties\":[],\"spans\":[{\"segmentId\":\"synthetic-segment-a\",\"start\":0,\"end\":30,\"quote\":\"Verify the cache before reuse.\"}]}]}",
+      "weight": 1
+    },
+    {
+      "id": "synthetic-backup-node",
+      "groupId": "synthetic-conversation-backup",
+      "input": "{\"untrustedTask\":{\"question\":\"When can a backup be reused?\"},\"untrustedSegments\":[{\"id\":\"synthetic-segment-b\",\"role\":\"assistant\",\"text\":\"Verify the backup before reuse.\"}]}",
+      "target": "{\"candidates\":[{\"title\":\"Check backup\",\"question\":\"When can a backup be reused?\",\"claim\":\"Verify the backup before reuse.\",\"kind\":\"principle\",\"whyKeep\":\"Synthetic example only\",\"uncertainties\":[],\"spans\":[{\"segmentId\":\"synthetic-segment-b\",\"start\":0,\"end\":31,\"quote\":\"Verify the backup before reuse.\"}]}]}",
+      "weight": 2
+    }
+  ]
+}

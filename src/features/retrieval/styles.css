@@ -1,0 +1,98 @@
+.retrieval { min-width: 0; color: #202629; font-size: 14px; line-height: 1.6; letter-spacing: 0; }
+.retrieval * { min-width: 0; overflow-wrap: anywhere; }
+.retrieval .retrieval-heading, .retrieval .heading-actions, .retrieval .query-actions { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.retrieval .retrieval-heading { margin-bottom: 24px; align-items: flex-start; }
+.retrieval h1 { font-size: 26px; line-height: 1.35; }
+.retrieval h2 { font-size: 16px; margin: 0 0 12px; line-height: 1.5; }
+.retrieval h3 { font-size: 14px; margin: 24px 0 10px; }
+.retrieval h4 { font-size: 14px; margin: 0 0 6px; }
+.retrieval p { margin: 6px 0 12px; }
+.retrieval button, .retrieval input, .retrieval textarea { font: inherit; }
+.retrieval button { min-height: 40px; padding: 8px 12px; border: 1px solid #cbd5d1; border-radius: 4px; background: #fff; color: inherit; cursor: pointer; white-space: normal; }
+.retrieval button:hover { background: #edf4f1; }
+.retrieval button:disabled { opacity: .55; cursor: not-allowed; }
+.retrieval button:focus-visible, .retrieval a:focus-visible, .retrieval input:focus-visible, .retrieval textarea:focus-visible, .retrieval summary:focus-visible { outline: 3px solid #167365; outline-offset: 3px; }
+.retrieval .tool-button { display: inline-grid; place-items: center; width: 40px; height: 40px; flex: 0 0 40px; padding: 0; }
+.retrieval svg { flex-shrink: 0; }
+.retrieval .mode-label { font-size: 12px; border-left: 3px solid #9b7224; padding: 2px 8px; }
+.retrieval .mode-label.fixture { border-color: #5e54a4; color: #51448a; }
+.retrieval .mode-label.live { border-color: #13745d; }
+.retrieval .metadata, .retrieval .empty-state { color: #59676a; font-size: 12px; }
+.retrieval .count { font-size: 12px; font-weight: 500; color: #52675c; margin-left: 8px; }
+.retrieval .query-form { padding: 0 0 24px; border-bottom: 1px solid #dce3df; }
+.retrieval .query-fields { border: 0; margin: 0; padding: 0; }
+.retrieval .query-fields > label { display: block; font-weight: 600; margin-bottom: 8px; }
+.retrieval textarea, .retrieval input[type="text"] { width: 100%; padding: 10px 12px; border: 1px solid #c6d2ce; border-radius: 4px; background: #fff; color: #202629; }
+.retrieval textarea { min-height: 92px; max-height: 360px; resize: vertical; }
+.retrieval input[type="checkbox"], .retrieval input[type="radio"] { width: 16px; height: 16px; flex: 0 0 16px; accent-color: #146650; }
+.retrieval .mode-choice { margin: 12px 0; padding: 0; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; border: 0; }
+.retrieval .mode-choice legend { font-size: 12px; color: #566366; margin-bottom: 6px; }
+.retrieval .mode-choice label, .retrieval .confirmed-control { display: flex; align-items: center; gap: 6px; font-size: 12px; }
+.retrieval .disabled { color: #6b7175; }
+.retrieval summary { cursor: pointer; min-height: 40px; padding: 8px 0; }
+.retrieval .constraint-row { display: grid; grid-template-columns: minmax(0, 1fr) auto 40px; align-items: center; gap: 8px; margin: 8px 0; }
+.retrieval .query-actions { justify-content: flex-start; margin-top: 12px; }
+.retrieval .primary-command, .retrieval .text-command, .retrieval .command-link { display: inline-flex; align-items: center; justify-content: center; gap: 7px; }
+.retrieval .primary-command { background: #185c4b; border-color: #185c4b; color: #fff; min-width: 120px; }
+.retrieval .primary-command:hover { background: #124c3e; }
+.retrieval .text-command { border: 0; color: #225d4f; padding-left: 0; }
+.retrieval .error-line { display: flex; align-items: flex-start; gap: 8px; color: #9c2935; margin: 16px 0; }
+.retrieval .error-line p { margin: 0; }
+.retrieval .notice { border-left: 2px solid #99703a; padding-left: 10px; color: #73552e; font-size: 12px; }
+.retrieval .clarification { padding: 20px 0; border-bottom: 1px solid #dce3df; }
+.retrieval .retrieval-summary { padding: 16px 0; border-bottom: 1px solid #dce3df; }
+.retrieval .model-answer { padding: 20px 0; border-bottom: 1px solid #dce3df; }
+.retrieval .model-answer .model-input { min-height: 180px; max-height: 320px; font-family: ui-monospace, monospace; font-size: 12px; }
+.retrieval .model-consent { margin-top: 16px; align-items: flex-start; }
+.retrieval .retrieval-workspace { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr); align-items: start; gap: 24px; margin-top: 24px; }
+.retrieval .retrieval-detail-region { border-left: 1px solid #dce3df; padding-left: 24px; }
+.retrieval .view-tabs { display: flex; gap: 4px; align-items: center; flex-wrap: wrap; border-bottom: 1px solid #dce3df; margin-bottom: 16px; }
+.retrieval .view-tabs button { display: inline-flex; align-items: center; gap: 6px; border: 0; border-bottom: 2px solid transparent; border-radius: 0; font-size: 12px; }
+.retrieval .view-tabs button[aria-selected="true"] { border-bottom-color: #216851; color: #164f3e; background: #edf5f0; }
+.retrieval .graph-pending { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; }
+.retrieval .result-group { margin-bottom: 24px; }
+.retrieval .result-group h2 { display: flex; justify-content: space-between; padding: 0 0 8px; border-bottom: 2px solid #527c70; }
+.retrieval .result-group.conditional h2 { border-color: #ad8644; }
+.retrieval .result-group.conflicts h2 { border-color: #b6666d; }
+.retrieval ul, .retrieval ol { padding-left: 20px; }
+.retrieval .result-group ul, .retrieval .text-paths, .retrieval .source-list, .retrieval .relation-list, .retrieval .condition-list { list-style: none; padding: 0; margin: 0; }
+.retrieval .result-select { width: 100%; display: grid; text-align: left; gap: 5px; border: 0; border-bottom: 1px solid #dce3df; border-radius: 0; padding: 12px 8px; background: transparent; }
+.retrieval [aria-pressed="true"] { background: #e6f1ec; outline: 1px solid #43826e; outline-offset: -1px; }
+.retrieval .result-title { font-weight: 600; }
+.retrieval .statement-preview { color: #4e5b5e; font-size: 12px; white-space: pre-wrap; }
+.retrieval .node-detail header h2 { font-size: 19px; }
+.retrieval .node-meta { margin: 12px 0 20px; }
+.retrieval .node-meta > div { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 10px; padding: 5px 0; font-size: 12px; }
+.retrieval .node-meta dt { color: #62706a; }
+.retrieval dd { margin: 0; }
+.retrieval .original-text, .retrieval blockquote { white-space: pre-wrap; overflow-wrap: anywhere; }
+.retrieval blockquote { padding: 0 0 0 12px; margin: 12px 0; border-left: 2px solid #93aea2; color: #3b5046; }
+.retrieval .source-list > li, .retrieval .relation-list > li, .retrieval .text-paths > li { padding: 14px 0; border-bottom: 1px solid #dce3df; }
+.retrieval .condition-list > li { display: grid; gap: 3px; margin-bottom: 10px; }
+.retrieval .path-nodes, .retrieval .path-nodes > span, .retrieval .relation-line { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.retrieval .path-nodes > span { max-width: 100%; }
+.retrieval .path-nodes button, .retrieval .relation-line button { padding: 6px 8px; text-align: left; font-size: 12px; }
+.retrieval .relation-line > span { font-size: 12px; color: #636872; }
+.retrieval .text-paths p, .retrieval .relation-list p, .retrieval .source-list p { font-size: 12px; }
+.retrieval .command-link { min-height: 40px; color: #245c76; text-decoration: underline; text-underline-offset: 3px; justify-content: flex-start; }
+.retrieval .detail-actions { display: flex; flex-wrap: wrap; column-gap: 18px; row-gap: 2px; margin-top: 24px; border-top: 1px solid #dce3df; padding-top: 12px; font-size: 12px; }
+.retrieval .empty-state { padding: 12px 0; }
+.retrieval .local-graph-section { margin-top: 32px; padding-top: 24px; border-top: 1px solid #dce3df; }
+.retrieval .local-graph-section .retrieval-heading { margin-bottom: 12px; }
+.retrieval .depth-control { display: flex; align-items: center; gap: 8px; font-size: 12px; }
+.retrieval select { font: inherit; min-height: 40px; padding: 6px 8px; background: #fff; color: #202629; border: 1px solid #cbd5d1; border-radius: 4px; }
+.retrieval .graph-tools { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+.retrieval .graph-tools output { width: 48px; text-align: center; font-size: 12px; }
+.retrieval .graph-viewport { position: relative; width: 100%; max-width: 100%; height: 420px; overflow: auto; border: 1px solid #dce3df; background: #fafbfa; border-radius: 4px; }
+.retrieval .graph-scaled-size { position: relative; }
+.retrieval .graph-stage { position: absolute; inset: 0 auto auto 0; transform-origin: top left; }
+.retrieval .graph-stage > svg { position: absolute; inset: 0; }
+.retrieval .graph-node { position: absolute; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 4px; text-align: left; font-size: 13px; line-height: 18px; padding: 8px 12px; border-radius: 4px; background: #fff; }
+.retrieval .graph-node[aria-pressed="true"] { background: #e6f1ec; border-color: #256a54; }
+.retrieval .graph-node > span { max-width: 100%; }
+.retrieval .graph-node-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 8px; }
+.retrieval .graph-node-list button { display: grid; width: 100%; gap: 6px; text-align: left; min-height: 80px; }
+.retrieval .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+@media (max-width: 1000px) { .retrieval .retrieval-workspace { grid-template-columns: minmax(0, 1fr); } .retrieval .retrieval-detail-region { border-left: 0; border-top: 1px solid #dce3df; padding-left: 0; padding-top: 24px; } }
+@media (max-width: 480px) { .retrieval h1 { font-size: 22px; } .retrieval .retrieval-heading { gap: 8px; } .retrieval .constraint-row { grid-template-columns: minmax(0, 1fr) 40px; } .retrieval .constraint-row input[type="text"] { grid-column: 1 / -1; } .retrieval .constraint-row .confirmed-control { grid-column: 1; } .retrieval .mode-choice { gap: 8px; } }
+@media (max-width: 320px) { .retrieval .heading-actions { width: 100%; } .retrieval .view-tabs button { padding: 8px; } }

@@ -1,0 +1,49 @@
+{
+  "name": "zhangduo-cnb-workbench",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "packageManager": "pnpm@10.32.1",
+  "scripts": {
+    "dev": "node tools/dev.mjs",
+    "local:start": "tsx tools/local-server.ts start",
+    "local:status": "tsx tools/local-server.ts status",
+    "local:stop": "tsx tools/local-server.ts stop",
+    "local:acceptance": "tsx tools/local-acceptance.ts",
+    "dev:web": "vite --host 127.0.0.1",
+    "dev:api": "tsx watch src/server/main.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "vite build",
+    "test": "vitest run",
+    "test:integration": "vitest run tests/integration",
+    "check:boundaries": "node tools/check-boundaries.mjs",
+    "check": "pnpm check:boundaries && pnpm typecheck && pnpm test && pnpm build",
+    "handoff": "node tools/prepare-handoff.mjs"
+  },
+  "dependencies": {
+    "@dagrejs/dagre": "^3.1.1",
+    "@hono/node-server": "^1.19.0",
+    "hono": "^4.9.8",
+    "lucide-react": "^0.468.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "zod": "^4.1.5"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.7",
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.3",
+    "jsdom": "26.1.0",
+    "playwright": "1.58.2",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.7",
+    "vitest": "^3.2.4"
+  }
+}

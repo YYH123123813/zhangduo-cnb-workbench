@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "scope": "README and source snapshot publication, not a production certification",
+  "environment": {
+    "node": "24.11.0",
+    "pnpm": "10.32.1",
+    "timezone": "Asia/Shanghai"
+  },
+  "tests": {
+    "command": "pnpm exec vitest run --maxWorkers=2",
+    "startedAt": "2026-09-15T22:34:56.682Z",
+    "finishedAt": "2026-09-15T22:36:12.624Z",
+    "files": 219,
+    "total": 1853,
+    "passed": 1853,
+    "failed": 0,
+    "skipped": 0,
+    "todo": 0,
+    "exitCode": 0,
+    "externalBoundaries": "synthetic"
+  },
+  "typecheck": { "exitCode": 0 },
+  "boundaries": { "exitCode": 0, "uniqueTaskIds": 75, "uniqueRoutes": 82 },
+  "build": { "exitCode": 0, "modules": 1816, "largeChunkWarningRetained": true },
+  "releaseAuditTests": { "passed": 11, "failed": 0, "exitCode": 0 },
+  "sourceComparison": {
+    "files": 549,
+    "mismatches": [],
+    "sha256": "7cb797a7d5ff3f3851eaff70e323382b9e9b9a97cad984250b1d5c3b0b88ae5a",
+    "algorithm": "SHA256 of Git-index ordered entries: UTF-8 path, NUL, blob bytes, NUL",
+    "includes": ["src/", "tests/", "training/", "tools/", "package.json", "pnpm-lock.yaml", "tsconfig.json", "vite.config.ts", "vitest.config.ts"],
+    "excludes": ["tools/check-release.mjs", "tools/check-release.test.mjs"]
+  },
+  "notVerifiedInThisPublication": [
+    "browser workflows",
+    "Python gradient training",
+    "real CNB writes and Issue privacy flag",
+    "pretrained model quality",
+    "user learning outcomes",
+    "production deployment",
+    "competition registration"
+  ]
+}
